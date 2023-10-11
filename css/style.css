@@ -1,0 +1,669 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuggles&family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Lobster&display=swap');
+
+
+
+/* 
+font-family: 'Fuggles', cursive;
+font-family: 'Montserrat', sans-serif; 
+font-family: 'Raleway', sans-serif;
+font-family: 'Amatic SC', cursive;
+font-family: 'Amatic SC', cursive;
+font-family: 'Lobster', cursive;
+*/
+:root{
+    --var-body-bg: black;
+    --var-body-fc: white;
+    --var-header-bg: rgb(255, 125, 125);
+    --var-header-col: rgba(255, 255, 255, 0);
+}
+[white]{
+    --var-body-bg: rgb(119, 119, 119);
+    --var-body-fc: black;
+    --var-header-bg:  rgb(243, 193, 136);
+    --var-header-col: rgb(243, 193, 136);
+}
+@media (max-width: 700px), (orientation: portrait)  {
+    /* При вертикальной ориентации фоновым цветом сайта будет чёрный */
+    .backimg{
+        background-image: url("/img/back2.png");
+        width: 2000px;
+        height: 2600px;
+    }
+  }
+@media (min-width: 800px), (orientation: landscape){  
+    .backimg{
+        background-image: url("/img/back1.jpg");
+        height: 1279px;
+        width: 1925px;
+    }
+    
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--var-body-bg);
+}
+/* начало шапки */
+.backimg{
+    position: fixed;
+    opacity: .45;
+  
+}
+
+.wrapper{
+    position: relative;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    background-color:  var(--var-header-col);
+    padding-bottom: 10px;
+    
+}
+.header_logo a{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color:  var(--var-body-fc);
+    font-size: clamp(18px,5vw, 32px);
+    padding-left: 150px;
+  
+    
+}
+.header_nav a{
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 500;
+    color: var(--var-body-fc);
+    font-size: 25px;
+    text-decoration: none;
+    padding-left: 50px;
+}
+.header_logos{
+    font-family: 'Fuggles', cursive; 
+    
+}
+.header_nav{
+    display: flex;
+    gap: 80px;
+}
+.btn_tt{
+    margin-left: -100px;
+}
+.header_logos:hover,  .header_logos:focus,  .header_logos:active{
+    opacity: 75%;
+    transition: all 0.5s ease;
+}
+
+/* начало тела */
+main{
+    position: relative;
+}
+.deseret_contain{
+    display: flex;
+    gap: 10px;
+    margin-top: 70px;
+    justify-content: left;
+    padding-top: 80px;
+    padding-left: 180px;
+    padding-bottom: 250px;
+}
+.deseret_img img{
+    position: absolute;
+    -webkit-transition: opacity 2s ease-in-out;
+    -moz-transition: opacity 2s ease-in-out;
+    -o-transition: opacity 2s ease-in-out;
+    transition: opacity 2s ease-in-out;
+   
+}
+/* анимация фото начало */
+@-webkit-keyframes cf3FadeInOut {
+0% {
+opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+    
+@-moz-keyframes cf3FadeInOut {
+0% {
+opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+    
+@-o-keyframes cf3FadeInOut {
+0% {
+opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+    
+@keyframes cf3FadeInOut {
+0% {
+opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+    
+#deseret_img, .png_left {
+-webkit-animation-name: cf3FadeInOut;
+-webkit-animation-timing-function: ease-in-out;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-duration: 5s;
+-webkit-animation-direction: alternate;
+    
+-moz-animation-name: cf3FadeInOut;
+-moz-animation-timing-function: ease-in-out;
+-moz-animation-iteration-count: infinite;
+-moz-animation-duration: 5s;
+-moz-animation-direction: alternate;
+    
+-o-animation-name: cf3FadeInOut;
+-o-animation-timing-function: ease-in-out;
+-o-animation-iteration-count: infinite;
+-o-animation-duration: 5s;
+-o-animation-direction: alternate;
+text-align: center; animation-name: cf3FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 5s;
+animation-direction: alternate;
+}
+/* анимация фото конец */
+.intro_tittle{
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+    color: var(--var-body-fc);
+    font-size: 50px;
+    padding: 0;
+    margin-bottom: 100px;
+    padding-top: 50px;
+}
+.body_tittle{
+    color: var(--var-body-fc);
+    font-size: 30px;
+    padding: 0;
+    letter-spacing: 2.5px;
+}
+.work_wrapper a{
+    display: flex;
+    justify-content: center;
+       
+}
+.work_container a{
+    background-color: var(--var-body-bg);
+    display: flex;
+}
+.png_out{
+    border: 5px solid rgba(61, 61, 61, 0.103);
+    gap: 10px;
+}
+.work_container_pic_v1, .work_container_pic_v2{
+    display: grid;
+    gap: 30px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    justify-content: center;
+}
+.ok1{
+    -webkit-filter: brightness(25%);
+    
+}
+
+.ok1:hover{
+    -webkit-filter: brightness(100%);
+    transform: perspective(5000px) ;
+    transform: perspective(5000px) ;
+    transition: all 2s ease;
+}
+
+.work_wrapper_project{
+    font-size: 54px;
+    color: var(--var-body-fc);
+    display: flex;
+    padding: 0;
+    border: 5px solid rgb(0, 0, 0);
+    font-family: 'Amatic SC', cursive;
+}
+.work_wrapper_project_V2{
+    font-size: 54px;
+    padding-top: 10px;
+    color: var(--var-body-fc);
+    display: flex;
+    padding: 0;
+    border: 5px solid rgb(0, 0, 0);
+    font-family: 'Amatic SC', cursive;
+}
+/* блоки с фэшн фотками */
+.mod_contain{
+    display: flex;
+    gap: 630px;
+    margin-top: 70px;
+    justify-content: left;
+    padding-top: 250px;
+    padding-left: 30px;
+    padding-bottom: 250px;
+    flex-direction: row-reverse;
+}
+.intro_tittle_mod{
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+    color:var(--var-body-fc);
+    font-size: 50px;
+    padding: 0;
+    margin-bottom: 100px;
+    padding-top: 50px;
+}
+.body_tittle_mod{
+    color: var(--var-body-fc);
+    font-size: 30px;
+    padding: 0;
+    letter-spacing: 3.5px;
+ 
+}
+#mod_img{
+    position:relative;
+    margin:0 auto;
+}
+/* анимация фото начало */
+.mod_img img {
+    position:absolute;
+    -webkit-transition: opacity 3s ease-in-out;
+    -moz-transition: opacity 3s ease-in-out;
+    -o-transition: opacity 3s ease-in-out;
+    transition: opacity 3s ease-in-out;
+}
+.mod_img{
+    padding-left: 155px;
+}
+@-webkit-keyframes cf3FadeInOut {
+0% {
+opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+        
+@-moz-keyframes cf3FadeInOut {
+0% {
+opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+        
+@-o-keyframes cf3FadeInOut {
+0% {
+opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+        
+@keyframes cf3FadeInOut {
+0% {
+opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+        
+#mod_img, .mod_l{
+-webkit-animation-name: cf3FadeInOut;
+-webkit-animation-timing-function: ease-in-out;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-duration: 5s;
+-webkit-animation-direction: alternate;
+        
+-moz-animation-name: cf3FadeInOut;
+-moz-animation-timing-function: ease-in-out;
+-moz-animation-iteration-count: infinite;
+-moz-animation-duration: 5s;
+-moz-animation-direction: alternate;
+        
+-o-animation-name: cf3FadeInOut;
+-o-animation-timing-function: ease-in-out;
+-o-animation-iteration-count: infinite;
+-o-animation-duration: 5s;
+-o-animation-direction: alternate;
+text-align: center; animation-name: cf3FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 5s;
+animation-direction: alternate;
+}
+/* анимация фото конец */
+/* блок с красотой*/
+.mod_camera_box{
+    display: flex;
+    gap: 150px;
+    margin-top: 70px;
+    padding-top: 250px;
+    padding-bottom: 250px;
+    padding-left: 180px;
+}
+
+.group_photo1:hover{
+    -webkit-filter: brightness(100%);
+    transition: all 2s ease;
+}
+.intro_tittle_camera{
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+    color: var(--var-body-fc);
+    font-size: 50px;
+    padding: 0;
+    margin-bottom: 100px;
+    padding-top: 75px;
+    
+}
+.body_tittle_camera{
+    color: var(--var-body-fc);
+    font-size: 30px;
+    padding: 0;
+    letter-spacing: 3.5px;
+ 
+}
+#mod_camera{
+    position:relative;
+    
+  
+}
+/* анимация фото начало */
+.mod_camera img {
+    position:absolute;
+    -webkit-transition: opacity 3s ease-in-out;
+    -moz-transition: opacity 3s ease-in-out;
+    -o-transition: opacity 3s ease-in-out;
+    transition: opacity 3s ease-in-out;
+}
+@-webkit-keyframes cf3FadeInOut {
+0% {
+opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+        
+@-moz-keyframes cf3FadeInOut {
+0% {
+opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+        
+@-o-keyframes cf3FadeInOut {
+0% {
+opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+        
+@keyframes cf3FadeInOut {
+0% {
+opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+        
+#mod_camera, .group_photo2{
+-webkit-animation-name: cf3FadeInOut;
+-webkit-animation-timing-function: ease-in-out;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-duration: 5s;
+-webkit-animation-direction: alternate;
+        
+-moz-animation-name: cf3FadeInOut;
+-moz-animation-timing-function: ease-in-out;
+-moz-animation-iteration-count: infinite;
+-moz-animation-duration: 5s;
+-moz-animation-direction: alternate;
+        
+-o-animation-name: cf3FadeInOut;
+-o-animation-timing-function: ease-in-out;
+-o-animation-iteration-count: infinite;
+-o-animation-duration: 5s;
+-o-animation-direction: alternate;
+text-align: center; animation-name: cf3FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 5s;
+animation-direction: alternate;
+}
+
+.footer_wrapper{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 100px; 
+}
+.them{
+    font-size: 30px;
+    color: #eee;
+}
+.footer_logo {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color:  var(--var-body-fc);
+    font-size: clamp(18px 5vw, 32px);
+}
+.footer_nav a{
+    font-family: 'Montserrat', sans-serif; 
+    color: var(--var-body-fc);
+    font-size: 25px;
+    text-decoration: none;
+    padding-right: 55px;
+    font-size: clamp(18px 5vw, 32px);
+}
+.footer_logos{
+    font-family: 'Fuggles', cursive; 
+}
+.footer_nav{
+    justify-content: center;
+    display: flex;
+    gap: 30px;
+}
+
+.vizit {
+    position: absolute;
+    flex-direction: column;
+    display: flex;
+    gap: 100px;
+    padding-top: 300px;
+
+}
+.background_vizit {
+    position: relative;
+    padding-right: 250px;
+    display: flex;
+    margin-bottom: 100px;
+    gap: 700px;
+    flex-direction: row-reverse;
+}
+.name_vizit{
+    position: absolute;
+    display: flex;
+    padding-right: 800px;
+    padding-top: 150px;
+    font-size: 40px;
+    
+}
+.work_vizit_project{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-size: 50px;
+    color: var(--var-body-fc);
+    display: flex;
+    padding: 0;
+    font-family: 'Amatic SC', cursive;
+}
+.pick_vizit{
+    -webkit-filter: brightness(75%);
+}
+
+.pick_vizit:hover{
+    -webkit-filter: brightness(100%);
+    transition: all 2s ease;
+}
+.reset{
+    background-color: brown;
+}
+/* кнопка наверх */
+.scroll_panel:hover {
+	background: #eee; 
+}
+ 
+/* Наверх */
+#scroll_top {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 90px;
+	transition: background 0.2s ease;  
+	display: block;
+	height: 100%;	
+	text-align: center;
+ 	opacity: 0.5;
+}
+#scroll_top span {
+	display: block;
+	width: 100%;	
+	position: absolute;
+	left: 0;	
+	top: 20px;
+}
+#scroll_top:hover {
+	background: #3b3b3b;  	
+	opacity: 1;
+}
+ 
+/* Скрытие панели при маленькой ширине окна */
+@media screen and (max-width: 700px) {
+	.scroll_panel {
+		display: none;
+	}
+}
+  /* кнопка наверх конец */
+/* Вторая страница начало */
+
+.inro_local {
+    gap: 100px;
+    margin-top: 70px;
+    justify-content: center;
+    padding-top: 150px;
+    padding-left: 150px;
+    padding-bottom: 250px;
+}
+.local_h{
+    justify-content: center;
+}
+.inro_local_text {
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+    color: var(--var-body-fc);
+    font-size: 30px;
+    padding: 0;
+    margin-bottom: 100px;
+    padding-top: 50px;
+}
+.local_img a{
+    display: flex;
+    gap: 50px;
+    padding-right: 10px;
+    margin-right: 50px;
+}
